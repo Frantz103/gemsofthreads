@@ -1,63 +1,80 @@
-# Next.js Framework Starter
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/next-starter-template)
+# Gems of Threads
 
-<!-- dash-content-start -->
+A modern React application for displaying and filtering threads from Meta's Threads platform. This app provides a clean, responsive interface to browse threads with text and image content.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It's deployed on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
+## Features
 
-This template uses [OpenNext](https://opennext.js.org/) via the [OpenNext Cloudflare adapter](https://opennext.js.org/cloudflare), which works by taking the Next.js build output and transforming it, so that it can run in Cloudflare Workers.
-
-<!-- dash-content-end -->
-
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
-
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/next-starter-template
-```
-
-A live public deployment of this template is available at [https://next-starter-template.templates.workers.dev](https://next-starter-template.templates.workers.dev)
+- **Thread Filtering**: Filter threads by type (all, text, images)
+- **Responsive Design**: Optimized for desktop and mobile viewing
+- **Modern UI**: Built with shadcn/ui components and Tailwind CSS
+- **Meta Threads Integration**: Designed to work with Meta's Threads API
 
 ## Getting Started
 
-First, run:
+### Prerequisites
 
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
 ```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-# or
-bun install
+git clone <repository-url>
+cd gemsofthreads
 ```
 
-Then run the development server (using the package manager of your choice):
+2. Install dependencies
+```bash
+npm install
+```
 
+3. Start the development server
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at `http://localhost:8080`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
 
-## Deploying To Production
+## Tech Stack
 
-| Command                           | Action                                       |
-| :-------------------------------- | :------------------------------------------- |
-| `npm run build`                   | Build your production site                   |
-| `npm run preview`                 | Preview your build locally, before deploying |
-| `npm run build && npm run deploy` | Deploy your production site to Cloudflare    |
-| `npm wrangler tail`               | View real-time logs for all Workers          |
+- **Vite** - Fast build tool and dev server
+- **TypeScript** - Type-safe JavaScript
+- **React 18** - UI library with modern hooks
+- **shadcn/ui** - Modern UI components built on Radix UI
+- **Tailwind CSS** - Utility-first CSS framework
+- **TanStack Query** - Data fetching and state management
+- **React Router** - Client-side routing
+- **React Hook Form + Zod** - Form handling and validation
 
-## Learn More
+## API Integration
 
-To learn more about Next.js, take a look at the following resources:
+This project is designed to integrate with Meta's Threads API:
+- **Documentation**: [Meta Threads API](https://developers.facebook.com/docs/threads/)
+- Currently uses mock data for development
+- TanStack Query is configured for future API integration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The project was originally created using [Lovable](https://lovable.dev/projects/b35142a5-d915-4fad-a1f5-c0f947fd9380) and can be further developed there.
+
+## Project Structure
+
+```
+src/
+├── components/     # React components
+├── pages/         # Route components
+├── data/          # Mock data and types
+├── hooks/         # Custom React hooks
+├── lib/           # Utility functions
+└── styles/        # Global styles
+```
